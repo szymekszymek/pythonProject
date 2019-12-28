@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+}
+
+.content {
+    margin: 2rem 2rem;
+    text-align: justify;
+    text-decoration: none;
+    line-height: 1.25;
+    font-size: 20px;
+}
+
+nav a.nav-link {
+    font-size: 25px;
+    margin: 0 2rem;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    margin-right: 4rem;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+    background-color: #DCDCDC;
+}
+
+p.footer {
+    position: fixed;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    background-color: #DCDCDC;
+    color: white;
+    text-align: left;
+    padding: 0.5rem 2rem;
+}
