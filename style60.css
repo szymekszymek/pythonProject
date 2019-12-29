@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    padding-bottom: 100px;
+}
+
+.content {
+    margin: 2rem 2rem;
+    text-align: justify;
+    text-decoration: none;
+    line-height: 1.25;
+    font-size: 20px;
+}
+
+nav a.nav-link {
+    font-size: 25px;
+    margin: 0 2rem;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    margin-right: 4rem;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+    background-color: #DCDCDC;
+}
+
+#table thead, th {
+    text-align: center;
+}

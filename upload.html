@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block base_title %}Create Graph{% endblock %}
+
+{% block base_navbar %}
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-chart-bar"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item active" href="/upload">
+                        <i class="far fa-plus-square"></i> Create graph
+                    </a>
+                    <a class="dropdown-item not-active" href="#">
+                        <i class="far fa-save"></i> Saved graphs
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" href="/login">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" href="/register">
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+        </a></li>
+    </ul>
+{% endblock %}
+
+{% block base_content %}
+    <div class="content">
+        <form method=post enctype=multipart/form-data>
+            <span>Delimiter:</span>
+            <span style="padding-left: 2.4rem;"><input type=radio name="Sep" value="," checked><span style="font-size: 12pt;"> comma</span></span><br>
+            <span style="padding-left: 8rem;"><input type=radio name="Sep" value=";"><span style="font-size: 12pt;"> semi-colon</span></span><br><br>
+            <span>Encoding:</span>
+            <span style="padding-left: 2.11rem;"><input type=radio name="Enc" value="utf8" checked><span style="font-size: 12pt;"> utf-8</span></span><br>
+            <span style="padding-left: 8rem;"><input type=radio name="Enc" value="latin_1"><span style="font-size: 12pt;"> latin-1</span></span><br><br><br>
+            <input type=file name=file>
+            <input type=submit value=Upload>
+        </form>
+        <br>
+        <p><font size="2">Please note that the file has to be in <b>CSV</b> format. <br> The file size cannot exceed <b>16
+            MB</b>.</font></p>
+    </div>
+{% endblock %}
